@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Задание 4 (Лексический контекст 15 минут)
+1. Напишите функцию createGreeting, которая принимает имя
+пользователя и возвращает функцию, которая будет выводить
+приветствие с использованием этого имени.
+// Пример использования:
+const greeting = createGreeting('John');
+greeting(); // Ожидаемый результат: "Hello, John!" -->
+
+    <script>
+        const createGreeting = (name) => {
+            const greeting = (name) => `Hello, ${name}!`;
+            return greeting(name);
+        }
+
+        console.log(createGreeting('John'));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Задание 2 (Чистые функции 25минут)
+        // 1. Напишите функцию getEvenNumbers, которая принимает массив
+        // чисел в качестве аргумента и возвращает новый массив,
+        // содержащий только четные числа.
+
+        function getEvenNumbers(arr) {
+            return [...arr].filter(item => item = item % 2 === 0);
+        }
+        console.log(getEvenNumbers([1, 2, 3, 4, 5, 6]));
+
+        // 2. Задача: Напишите функцию calculateAverage, которая принимает
+        // массив чисел в качестве аргумента и возвращает среднее значение
+        // этих чисел.
+
+        function calculateAverage(arr) {
+            const sumOfArr = arr.reduce((acc, num) => acc + num, 0);
+            return sumOfArr / arr.length;
+        }
+        console.log(calculateAverage([1, 2, 3, 4, 5, 6]));
+
+        // 3. Напишите функцию capitalizeFirstLetter, которая принимает строку в
+        // качестве аргумента и возвращает новую строку, в которой первая
+        // буква каждого слова является заглавной.
+
+        function capitalizeFirstLetter(string) {
+            return string.split(' ').map(item => item[0].toUpperCase() + item.slice(1)).join(' ');
+        }
+        console.log(capitalizeFirstLetter('ones upon a time'));
+    </script>
+</body>
+
+</html>

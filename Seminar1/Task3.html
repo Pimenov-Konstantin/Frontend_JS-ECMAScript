@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Задание 3 (Замыкания 20 минут)
+        // 1. Напишите функцию createCalculator, которая принимает начальное
+        // значение и возвращает объект с двумя методами: add и subtract.
+        // Метод add должен увеличивать значение на переданное число, а
+        // метод subtract должен уменьшать значение на переданное число.
+        // Значение должно быть доступно только через методы объекта, а не
+        // напрямую.
+
+        function createCalculator(number1) {
+            const obj = {
+                add: (number) => number + number1,
+                subtract: (number) => number - number1
+            }
+            return obj;
+        }
+        const newObj = createCalculator(5);
+        console.log(newObj.add(2));
+        console.log(newObj.subtract(7));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Задание 1 (тайминг 20 минут) -->
+        // 1. Создайте функцию mergeArrays, которая принимает два
+        // массива и возвращает новый массив, содержащий все
+        // элементы из обоих массивов. Используйте spread (многоточие)
+        // оператор для объединения массивов.
+        // mergeArrays([1, 2, 3], [4, 5, 6]); // Ожидаемый результат: [1,
+        // 2, 3, 4, 5, 6]
+
+        function mergeArrays(array1, array2) {
+            const mergeArraysTwo = [...array1, ...array2];
+            return mergeArraysTwo;
+        }
+        console.log(mergeArrays([1, 2, 3], [4, 5, 6]));
+
+
+        // 2. Создайте функцию removeDuplicates, которая принимает
+        // любое количество аргументов и возвращает новый
+        // массив, содержащий только уникальные значения.
+        // Используйте rest оператор для сбора всех аргументов в
+        // массив а затем filter для определения дубликатов.
+        // removeDuplicates(1, 2, 3, 2, 4, 1, 5); // Ожидаемый
+        // результат: [1, 2, 3, 4, 5]
+
+        // решение 1
+        // function removeDuplicates(...args) {
+        //     const arr = [...args];
+        //     return arr.filter((el, index) => arr.indexOf(el) === index);
+        // }
+        // console.log(removeDuplicates(1, 2, 3, 2, 4, 1, 5));
+
+        // решение 2
+        function removeDuplicates(...args) {
+            const arr = [new Set([...args])]; //set собирает делает коллекцию уникальных значений
+            return arr;
+        }
+        console.log(removeDuplicates(1, 2, 3, 2, 4, 1, 5));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Задание 6 (Рекурсия 25 минут)
+1. Напишите рекурсивную функцию sumDigits, которая принимает
+положительное целое число в качестве аргумента и возвращает
+сумму его цифр.
+// Пример использования:
+console.log(sumDigits(123)); // Ожидаемый результат: 6 (1 + 2 + 3)
+console.log(sumDigits(456789)); // Ожидаемый результат: 39 (4 + 5 + 6
++ 7 + 8 + 9) -->
+
+    <script>
+        let result = 0;
+        const sumDigits = function(num) {
+            result += num % 10;
+            num = Math.trunc(num / 10); // trunc отбрасывает все значения после запятой
+            if (num > 0) sumDigits(num);
+            return num;
+        }
+        sumDigits(456789);
+        console.log(result);
+
+        // вариант 2
+        // function sumDigits(n) {
+        //     n = `${n}`;
+        //     if (n.length == 1) return +n;
+
+        //     return +n[0] + sumDigits(n.slice(1));
+        // }
+        // sumDigits(123);
+
+        // вариант 3 без рекурсии
+        // const sumDigits = (num) => {
+        //     let sum = 0;
+        //     for (const numb of `${num}`) {
+        //         sum += +numb;
+        //     }
+        //     return sum;
+        // };
+    </script>
+</body>
+
+</html>
